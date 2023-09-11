@@ -17,11 +17,11 @@ public class Transferencia {
     @Column(nullable = false)
     private UUID id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(referencedColumnName = "id", nullable = false, name = "origem_id")
     private Usuario origemId;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(referencedColumnName = "id", nullable = false, name = "destino_id")
     private Usuario destinoId;
 
